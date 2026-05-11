@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KEVILAGU | Your Cart</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f7efea",
+                    "surface-container-low": "#faf2ed",
+                    "on-tertiary-fixed": "#330f1f",
+                    "primary-fixed": "#ffd9df",
+                    "on-background": "#1e1b18",
+                    "tertiary-fixed-dim": "#f2b6cb",
+                    "on-primary-fixed-variant": "#8f003f",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#3f001b",
+                    "on-secondary-container": "#6e0034",
+                    "surface-tint": "#b90c55",
+                    "on-tertiary-fixed-variant": "#65394b",
+                    "on-surface": "#1e1b18",
+                    "surface": "#fff8f4",
+                    "outline": "#8d6f75",
+                    "on-primary-fixed": "#3f0018",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#e0d9d4",
+                    "secondary-container": "#fd6c9c",
+                    "tertiary": "#6c3f50",
+                    "surface-bright": "#fff8f4",
+                    "surface-variant": "#e9e1dc",
+                    "primary": "#9b0044",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#594045",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#ab2c5d",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#8b0e45",
+                    "outline-variant": "#e1bec4",
+                    "surface-container": "#f4ece7",
+                    "tertiary-container": "#875668",
+                    "background": "#fff8f4",
+                    "surface-container-highest": "#e9e1dc",
+                    "surface-container-high": "#eee7e2",
+                    "secondary-fixed": "#ffd9e1",
+                    "primary-container": "#c2185b",
+                    "on-tertiary-container": "#ffd8e4",
+                    "primary-fixed-dim": "#ffb1c2",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb1c2",
+                    "inverse-surface": "#33302d",
+                    "secondary-fixed-dim": "#ffb1c5",
+                    "on-primary-container": "#ffd9df",
+                    "tertiary-fixed": "#ffd9e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "unit": "8px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "display": ["Playfair Display"],
+                    "body-md": ["Atkinson Hyperlegible Next"],
+                    "label-sm": ["Atkinson Hyperlegible Next"],
+                    "label-lg": ["Atkinson Hyperlegible Next"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Atkinson Hyperlegible Next"]
+            },
+            "fontSize": {
+                    "display": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .mirror-accent {
+            background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e1bec4 100%);
+            box-shadow: inset -1px -1px 2px rgba(0,0,0,0.1), 1px 1px 3px rgba(122,59,90,0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface dark:bg-surface-container-low shadow-sm shadow-tertiary/10">
+<div class="flex items-center gap-4">
+<button class="md:hidden material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform" onclick="toggleDrawer()">menu</button>
+<h1 class="font-display text-headline-lg font-bold text-primary dark:text-primary-fixed tracking-tight">KEVILAGU</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center"><a class="font-label-lg text-primary font-bold border-b-2 border-primary" href="home.html">Home</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="shop_designs.html">Shop</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="about_us.html">About Us</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="faq.html">FAQs</a></nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">search</span></button>
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">shopping_cart</span></button>
+</div>
+</header>
+<main class="pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Page Title -->
+<div class="mb-stack-lg flex items-center justify-between">
+<h2 class="font-display text-display text-primary">Your Cart</h2>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-label-lg">Secure Checkout</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Items & Form -->
+<div class="lg:col-span-7 flex flex-col gap-stack-md">
+<!-- Multi-buy Reward Banner -->
+<div class="bg-secondary-container text-on-secondary-container p-stack-md rounded-xl flex items-center gap-4 border border-secondary/20 shadow-sm">
+<span class="material-symbols-outlined text-headline-md">redeem</span>
+<div>
+<p class="font-label-lg font-bold">Bundle Discount Applied!</p>
+<p class="text-body-md">You're saving ₹299 on your artisanal collection.</p>
+</div>
+</div>
+<!-- Item List -->
+<section class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface p-4 rounded-xl shadow-sm border border-outline-variant/30 flex gap-4 items-center">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A high-end Kashmiri embroidered watch with a detailed leather strap showcasing intricate floral needlework. The lighting is soft and golden, highlighting the fine texture of the embroidery threads against a warm cream background. The image has a luxurious, maternal, and heritage-focused aesthetic with deep pink accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmUrFtDTSX7LuGX0-K7fWJyKQv4J5WAiIj2d9iPu3fnskjpVODQKG6NSVE7kvVTPVxdJbvJ52fCJhtzNFkxX_fvswcN-Pxips24AXPiwYLkwHH7AG3iZ4ItedK73WDIK_92JdtFadc26Sci7bhleKrbsH-yexAVW-zgaJ3L-cu5OEbUvqMZThdnnTRD7g6oxDTGz6xmbdYUhE7mY9Y-tJBnHBa_icJgq7qwtc2M8hQ6zzbV8NcL8Eqb6A4wYKfFc6p238o6nANoZ8"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-display text-headline-md text-on-surface">Kashmiri Watch</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<p class="text-on-surface-variant text-body-md italic">Hand-stitched Crimson Flora</p>
+<div class="mt-2 flex justify-between items-center">
+<p class="font-bold text-primary text-body-lg">₹599</p>
+<div class="flex items-center gap-3 bg-surface-container rounded-full px-3 py-1">
+<button class="text-primary font-bold">-</button>
+<span class="font-bold">1</span>
+<button class="text-primary font-bold">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface p-4 rounded-xl shadow-sm border border-outline-variant/30 flex gap-4 items-center">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A pair of vibrant Gujarati mirror-work earrings featuring intricate embroidery and small reflective mirrors. The jewelry is presented on a minimalist blush-toned surface with professional studio lighting that creates soft shadows. The overall mood is artisanal, elegant, and celebrates Indian heritage craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk7tjoVCwWM5FY5nQUpsb03cpBJ2axwWyekHGkqxaxgHA9EJgo9s11q0kCditHYJ_u8DomLFbfo1PB4f5IvIvPLfUUo1mInDq0zRC-BmhGLLEb6f03vN1VDLyfTe1Tlt8POCkFmVfFbpPyxoKYQN1fZAMA3eLjah8wymk6Gmsdi5Nv55e98HfGtJ7XAbFf9-rkrbfCsmDmXVGhNYXLByvLmdWQfjHSXZgj-eUWC7KWeVOVUEG6lJCpfRbolkaAl_Twhaj2tC2S5tA"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-display text-headline-md text-on-surface">Mirror-work Earrings</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<p class="text-on-surface-variant text-body-md italic">Abhala Bharat Collection</p>
+<div class="mt-2 flex justify-between items-center">
+<p class="font-bold text-primary text-body-lg">₹599</p>
+<div class="flex items-center gap-3 bg-surface-container rounded-full px-3 py-1">
+<button class="text-primary font-bold">-</button>
+<span class="font-bold">1</span>
+<button class="text-primary font-bold">+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Checkout Form -->
+<section class="mt-stack-lg bg-surface p-stack-md rounded-xl border border-outline-variant/30">
+<h3 class="font-display text-headline-lg text-primary mb-6">Delivery Details</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-on-surface-variant">Full Name</label>
+<input class="h-14 px-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary text-body-lg" placeholder="e.g. Aditi Sharma" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-on-surface-variant">Phone Number</label>
+<input class="h-14 px-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary text-body-lg" placeholder="+91 98765 43210" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-on-surface-variant">Shipping Address</label>
+<textarea class="p-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary text-body-lg" placeholder="Enter your full address with landmark..." rows="3"></textarea>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<h4 class="font-label-lg text-on-surface-variant mb-4 uppercase tracking-widest">Payment Method</h4>
+<div class="space-y-3" id="paymentOptions">
+
+  <!-- COD -->
+  <label class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary bg-primary-fixed/10 cursor-pointer transition-all" onclick="selectPayment(this)">
+    <input checked="" class="w-5 h-5 text-primary border-primary focus:ring-primary" name="payment" type="radio" value="cod"/>
+    <div class="flex-grow">
+      <p class="font-bold text-primary text-body-lg">Cash on Delivery (COD)</p>
+      <p class="text-body-md text-on-surface-variant">Pay cash when your order arrives.</p>
+    </div>
+    <span class="material-symbols-outlined text-primary text-2xl">payments</span>
+  </label>
+
+  <!-- UPI -->
+  <label class="flex items-center gap-4 p-4 rounded-xl border-2 border-outline-variant/30 bg-surface cursor-pointer transition-all hover:border-primary/40" onclick="selectPayment(this)">
+    <input class="w-5 h-5 text-primary border-primary focus:ring-primary" name="payment" type="radio" value="upi"/>
+    <div class="flex-grow">
+      <p class="font-bold text-on-surface text-body-lg">UPI / Online Payment</p>
+      <p class="text-body-md text-on-surface-variant">Google Pay, PhonePe, Paytm & more.</p>
+    </div>
+    <span class="material-symbols-outlined text-secondary text-2xl">qr_code_2</span>
+  </label>
+  <!-- UPI input (shown when selected) -->
+  <div class="hidden pl-4 pr-2 pb-2" id="upiInputBlock">
+    <input class="w-full h-12 px-4 rounded-lg bg-surface-container-low border border-outline-variant focus:ring-2 focus:ring-primary text-body-md" placeholder="Enter UPI ID (e.g. name@upi)" type="text"/>
+  </div>
+
+  <!-- Credit / Debit Card -->
+  <label class="flex items-center gap-4 p-4 rounded-xl border-2 border-outline-variant/30 bg-surface cursor-pointer transition-all hover:border-primary/40" onclick="selectPayment(this)">
+    <input class="w-5 h-5 text-primary border-primary focus:ring-primary" name="payment" type="radio" value="card"/>
+    <div class="flex-grow">
+      <p class="font-bold text-on-surface text-body-lg">Credit / Debit Card</p>
+      <p class="text-body-md text-on-surface-variant">Visa, Mastercard, RuPay accepted.</p>
+    </div>
+    <span class="material-symbols-outlined text-secondary text-2xl">credit_card</span>
+  </label>
+  <!-- Card inputs (shown when selected) -->
+  <div class="hidden pl-4 pr-2 pb-2 space-y-3" id="cardInputBlock">
+    <input class="w-full h-12 px-4 rounded-lg bg-surface-container-low border border-outline-variant focus:ring-2 focus:ring-primary text-body-md" placeholder="Card Number" type="text" maxlength="19"/>
+    <div class="grid grid-cols-2 gap-3">
+      <input class="h-12 px-4 rounded-lg bg-surface-container-low border border-outline-variant focus:ring-2 focus:ring-primary text-body-md" placeholder="MM / YY" type="text" maxlength="5"/>
+      <input class="h-12 px-4 rounded-lg bg-surface-container-low border border-outline-variant focus:ring-2 focus:ring-primary text-body-md" placeholder="CVV" type="password" maxlength="4"/>
+    </div>
+    <input class="w-full h-12 px-4 rounded-lg bg-surface-container-low border border-outline-variant focus:ring-2 focus:ring-primary text-body-md" placeholder="Cardholder Name" type="text"/>
+  </div>
+
+  <!-- Net Banking -->
+  <label class="flex items-center gap-4 p-4 rounded-xl border-2 border-outline-variant/30 bg-surface cursor-pointer transition-all hover:border-primary/40" onclick="selectPayment(this)">
+    <input class="w-5 h-5 text-primary border-primary focus:ring-primary" name="payment" type="radio" value="netbanking"/>
+    <div class="flex-grow">
+      <p class="font-bold text-on-surface text-body-lg">Net Banking</p>
+      <p class="text-body-md text-on-surface-variant">All major Indian banks supported.</p>
+    </div>
+    <span class="material-symbols-outlined text-secondary text-2xl">account_balance</span>
+  </label>
+
+</div>
+<script>
+function selectPayment(label) {
+  // Reset all labels
+  document.querySelectorAll('#paymentOptions label').forEach(l => {
+    l.classList.remove('border-primary', 'bg-primary-fixed/10');
+    l.classList.add('border-outline-variant/30', 'bg-surface');
+  });
+  // Activate selected
+  label.classList.add('border-primary', 'bg-primary-fixed/10');
+  label.classList.remove('border-outline-variant/30', 'bg-surface');
+  // Toggle extra inputs
+  const val = label.querySelector('input[type=radio]').value;
+  document.getElementById('upiInputBlock').classList.toggle('hidden', val !== 'upi');
+  document.getElementById('cardInputBlock').classList.toggle('hidden', val !== 'card');
+}
+</script>
+</div>
+</form>
+</section>
+</div>
+<!-- Right Column: Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 bg-surface p-stack-md rounded-2xl shadow-xl shadow-tertiary/10 border border-outline-variant/20">
+<h3 class="font-display text-headline-lg text-on-surface mb-6 flex items-center gap-2">
+                        Order Summary
+                        <div class="mirror-accent w-4 h-4 rounded-full"></div>
+</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-body-lg">
+<span class="text-on-surface-variant">Subtotal (2 items)</span>
+<span class="font-semibold">₹1,198</span>
+</div>
+<div class="flex justify-between text-body-lg text-secondary">
+<span>Bundle Discount</span>
+<span class="font-semibold">-₹299</span>
+</div>
+<div class="flex justify-between text-body-lg">
+<span class="text-on-surface-variant">Shipping</span>
+<span class="text-primary font-bold">FREE</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex justify-between items-baseline">
+<span class="font-display text-headline-lg">Total</span>
+<span class="font-display text-display text-primary">₹899</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-bold text-body-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
+                        Place Order - ₹899
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 space-y-4">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="text-body-md font-semibold">100% Handmade &amp; Authentic</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+<span class="text-body-md font-semibold">Free Express Shipping across India</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">assignment_return</span>
+<span class="text-body-md font-semibold">Easy 7-day Returns</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter mt-section-gap bg-surface-container-highest border-t border-outline-variant/30">
+<div class="flex flex-col gap-4">
+<h2 class="font-display text-headline-md text-primary">KEVILAGU Artisanal</h2>
+<p class="text-on-surface-variant text-body-md">Empowering women artisans from the heart of Gujarat to your home.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-lg text-primary uppercase">Quick Links</h4>
+<div class="flex flex-wrap gap-x-6 gap-y-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">100% Handmade</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Free Shipping</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">COD Available</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Easy Returns</a>
+</div>
+</div>
+<div class="flex flex-col gap-4 items-start md:items-end">
+<p class="text-on-surface-variant text-body-md md:text-right">© 2024 KEVILAGU. Made in India with heart.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">favorite</span>
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+</div>
+</div>
+</footer>
+
+<!-- Mobile Drawer -->
+<div class="hidden" id="mobileDrawer">
+  <div class="fixed inset-0 bg-black/40 z-40" id="drawerOverlay" onclick="toggleDrawer()"></div>
+  <div class="fixed left-0 top-0 h-full w-72 bg-surface z-50 shadow-2xl flex flex-col p-6 gap-2">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="font-display text-headline-md text-primary font-bold">KEVILAGU</h2>
+      <button onclick="toggleDrawer()" class="material-symbols-outlined text-on-surface-variant">close</button>
+    </div>
+    <a href="home.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">home</span>Home</a>
+    <a href="shop_designs.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">grid_view</span>Shop</a>
+    <a href="faq.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">help_outline</span>FAQs</a>
+    <a href="about_us.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">info</span>About Us</a>
+  </div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface/95 backdrop-blur-md border-t border-outline-variant/20 shadow-lg">
+  <button onclick="toggleDrawer()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all">
+    <span class="material-symbols-outlined">menu</span>
+    <span class="font-label-lg text-[10px]">Menu</span>
+  </button>
+  <a href="shop_designs.html" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">grid_view</span><span class="font-label-lg text-[10px]">Shop</span></a>
+  <a href="#" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">search</span><span class="font-label-lg text-[10px]">Search</span></a>
+  <a href="cart.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 min-w-[64px] active:scale-90 transition-all"><span class="material-symbols-outlined">shopping_basket</span><span class="font-label-lg text-[10px]">Cart</span></a>
+</nav>
+<script>
+function toggleDrawer() {
+  document.getElementById('mobileDrawer').classList.toggle('hidden');
+}
+</script>
+</body></html>

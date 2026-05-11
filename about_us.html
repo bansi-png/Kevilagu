@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mirror-accent {
+            background: linear-gradient(135deg, #ffd9e1 0%, #ffffff 50%, #ffd9e1 100%);
+            box-shadow: inset 0 0 10px rgba(122, 59, 90, 0.1), 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .text-shadow-warm {
+            text-shadow: 2px 2px 4px rgba(122, 59, 90, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f7efea",
+                        "surface-container-low": "#faf2ed",
+                        "on-tertiary-fixed": "#330f1f",
+                        "primary-fixed": "#ffd9df",
+                        "on-background": "#1e1b18",
+                        "tertiary-fixed-dim": "#f2b6cb",
+                        "on-primary-fixed-variant": "#8f003f",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#3f001b",
+                        "on-secondary-container": "#6e0034",
+                        "surface-tint": "#b90c55",
+                        "on-tertiary-fixed-variant": "#65394b",
+                        "on-surface": "#1e1b18",
+                        "surface": "#fff8f4",
+                        "outline": "#8d6f75",
+                        "on-primary-fixed": "#3f0018",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#e0d9d4",
+                        "secondary-container": "#fd6c9c",
+                        "tertiary": "#6c3f50",
+                        "surface-bright": "#fff8f4",
+                        "surface-variant": "#e9e1dc",
+                        "primary": "#9b0044",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#594045",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#ab2c5d",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#8b0e45",
+                        "outline-variant": "#e1bec4",
+                        "surface-container": "#f4ece7",
+                        "tertiary-container": "#875668",
+                        "background": "#fff8f4",
+                        "surface-container-highest": "#e9e1dc",
+                        "surface-container-high": "#eee7e2",
+                        "secondary-fixed": "#ffd9e1",
+                        "primary-container": "#c2185b",
+                        "on-tertiary-container": "#ffd8e4",
+                        "primary-fixed-dim": "#ffb1c2",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#ffb1c2",
+                        "inverse-surface": "#33302d",
+                        "secondary-fixed-dim": "#ffb1c5",
+                        "on-primary-container": "#ffd9df",
+                        "tertiary-fixed": "#ffd9e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "12px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "stack-md": "24px",
+                        "unit": "8px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "display": ["Playfair Display"],
+                        "body-md": ["Atkinson Hyperlegible Next"],
+                        "label-sm": ["Atkinson Hyperlegible Next"],
+                        "label-lg": ["Atkinson Hyperlegible Next"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Atkinson Hyperlegible Next"]
+                    },
+                    "fontSize": {
+                        "display": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface dark:bg-surface-container-low shadow-sm shadow-tertiary/10">
+<div class="flex items-center gap-4">
+<button class="md:hidden material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform" onclick="toggleDrawer()">menu</button>
+<h1 class="font-display text-headline-lg font-bold text-primary dark:text-primary-fixed tracking-tight">KEVILAGU</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center"><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="home.html">Home</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="shop_designs.html">Shop</a><a class="font-label-lg text-primary font-bold border-b-2 border-primary" href="about_us.html">About Us</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="faq.html">FAQs</a></nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">search</span></button>
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">shopping_cart</span></button>
+</div>
+</header>
+<main class="pt-24 pb-20 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row items-center gap-12 max-w-container-max mx-auto">
+<div class="flex-1 space-y-stack-md text-center md:text-left z-10">
+<span class="font-label-sm text-primary tracking-[0.2em] block">OUR HERITAGE</span>
+<h2 class="font-display text-display text-on-surface leading-tight">Our Story: Empowering Women, One Thread at a Time</h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl">Every stitch we make is a testament to the resilience and artistry of the women of Gujarat, blending centuries-old tradition with modern elegance.</p>
+</div>
+<div class="flex-1 relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-xl shadow-tertiary/10">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-resolution portrait of a Gujarati woman artisan smiling warmly while working on intricate embroidery. She is illuminated by soft, natural sunlight in a rustic yet clean setting. The color palette features warm creams, deep raspberries, and blush pinks, reflecting the brand's maternal and luxurious aesthetic. The focus is sharp on her hands and the delicate mirror-work, creating a tactile and authentic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1OZw0o8jGJ34yaECpijtt4j3EEbCchIz1zM5Ldeh6ZyAzwufrvW1rn7mZyt-6JvAaZw2FFWZ3MVHx6kKOimMpjH7ZTOjnO23wNrACe2TFULjw5MFoRcvhiQFoTREHnqBInUsBtYvNtEMaVT56ibjTwkNNhFhHzACW7weurqvClmOSPI7svJknmVfJOz4n8-LQp6pMXkxG-Mqh95M4OZrs1DZe8PPVIYktAQEe1CH2kD3IyUeXhjWqnadWoyUR28MxE-7l7Dp9fsc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<!-- Decorative Pattern Background -->
+<div class="absolute -right-20 -top-20 opacity-5 pointer-events-none">
+<svg height="400" viewbox="0 0 100 100" width="400">
+<circle class="text-primary" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.5"></circle>
+<circle class="text-primary" cx="50" cy="50" fill="none" r="20" stroke="currentColor" stroke-width="0.5"></circle>
+</svg>
+</div>
+</section>
+<!-- Core Mission Section -->
+<section class="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square rounded-xl overflow-hidden shadow-lg transform translate-y-8">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of hands performing traditional Gujarati beadwork. The lighting is focused and warm, highlighting the vibrant threads and shimmering glass beads. The setting is clean and artistic, emphasizing the craftsmanship. Soft blush tones and deep plums dominate the color scheme, maintaining a consistent brand identity that feels both maternal and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNvhjHnjOYFim63R1OEwWXSguJZMIpIgJZwAUuQxc6ik0inhxWUqXpuMCphO-Yhkmf-NBFYaJPU1kRoTO8uho5pDuiNSr11ZWtU8jPwfs_Od_b8dz-CDqmtcVitB4rrcTaAr3XOq2tEQmrwTBWae8yu67BwB3IUOI9GDpqM8JqzRenx9uPoIq-ebaLXkVoYTTCLyPvHdQuhAotUdMnNINnfLEgsISbDCRYIqzXGWSuV76n9aO2wjDWBqwERDuxU0Fs-PQxtJfecHE"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Intricate fabric textures and embroidery details laid out on a cream-colored textile. The scene is bright and minimalist, capturing the high-fidelity texture of the materials. Subtle shadows add depth, and the overall mood is serene and luxurious, aligning with a brand that values heritage and artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYN_PdjmBIVeLxq1bK9cUO8c5vk8sK62A7WH3IJdnTAZd9UeP7lf1Fe6hQwt5oJildPKzhurgEMMVvfdFB55BKLMjdLWISgqyhufzps42nnxqy8M0oSbkJsciNd8Wi27tAVNnak2VCOxINEtghnzi1YMrWT6pNEPo_zsYhQtJXpQyfMZKMkK6XFrpDPM-6dRsd3koaR6XHyrKI1BxFDDFnQ6DeJIgkYrxUKaFQOr1nChrS_cnWscELst36WpHTy7WAyZRdi9_D3AI"/>
+</div>
+</div>
+<div class="space-y-stack-md">
+<h3 class="font-display text-headline-lg text-primary">Preserving Traditions, Creating Independence</h3>
+<div class="space-y-stack-sm text-on-surface-variant font-body-md">
+<p>At KEVILAGU, our mission transcends mere aesthetics. We are a collective dedicated to the financial independence of Gujarati women. By providing a global platform for their ancestral craft, we ensure that the rhythmic art of embroidery continues to thrive in a digital age.</p>
+<p>Each piece is handcrafted in rural workshops where our artisans are paid fair wages, provided with safe working environments, and encouraged to lead their communities. Your purchase directly fuels education initiatives and healthcare for their families.</p>
+</div>
+<div class="flex gap-4 pt-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-label-lg text-on-surface">100% Handmade</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-label-lg text-on-surface">Ethically Sourced</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-3xl mx-auto text-center space-y-stack-md relative">
+<span class="material-symbols-outlined text-primary-container opacity-20 text-[80px] absolute -top-10 left-0 -translate-x-1/2">format_quote</span>
+<blockquote class="font-display text-headline-lg italic text-on-surface leading-relaxed text-shadow-warm">
+                    "When you buy from Kevilagu, you're not just buying jewellery — you're investing in a woman's independence and her child's dream."
+                </blockquote>
+<div class="flex justify-center items-center gap-4">
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+<cite class="not-italic font-label-lg text-primary tracking-widest">KEVILAGU FOUNDATION</cite>
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+</div>
+</div>
+</section>
+<!-- Artisan Spotlight (Bento Grid) -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<h3 class="font-display text-headline-lg text-center mb-12">The Art of the Stitch</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Mirror Work -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-xl transition-shadow duration-500">
+<div class="aspect-video">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed macro shot of traditional Gujarati mirror-work (Abhala Bharat) on a rich deep plum fabric. The mirrors reflect a soft ambient light, creating a sparkling, tactile effect. The surrounding embroidery is intricate, with fine threads in blush and gold. The composition is artistic and high-fidelity, embodying the brand's focus on luxury craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSEup9Bxxsa3fthL3tc0haftSejvpOx-a266--pHxSytfcAXmEJ8D4SGnnU64Aw8rjxp3qznPUu4T8zCEwhzdeqvqGdpqp_HweEF345Em5eEJOyg5E0BGYVADsa_Xl3rP7rPGv1U_R8SHNrcAdp8ZcgBRmsFt0uFcVzI3GnL7kFtlkee_DhqJ_0XdECSGbf-rR3pHkFwd8Zjlqz5vvUNWZT-fWtsS7u6p3G8Oy4RcEmO1AvsPx-4Tno9IcQPDj5MBB2AyJOOFR03A"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent flex flex-col justify-end p-8">
+<h4 class="font-display text-headline-md text-surface">Abhala Bharat (Mirror-Work)</h4>
+<p class="text-surface/90 font-body-md max-w-md">Ancient sun-reflecting art used to ward off evil spirits and celebrate light.</p>
+</div>
+</div>
+<!-- Beading -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container shadow-sm hover:shadow-xl transition-shadow duration-500">
+<div class="h-full min-h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vertical composition showcasing vibrant beaded jewelry being arranged on a soft linen surface. The beads are a mix of earthy and jewel tones, with a focus on deep raspberries and muted golds. The lighting is high-key and modern, emphasizing the tactile quality of the handmade items. The atmosphere is poised and artistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAATa3PbKlue9A0ccnHy-BPbv7waLtJRezducQr1SBAuHaG7z_lqqpNeotziAM851_Tz7MqkjaiitEDy_RqM1pGZX8geBE7JGHwV0Zb69ab22_fEY7H4tHhpIWhYS37yREUwOtHjQg6kvmGRSMyBovqh-HkFGaZwdCraksS4EmYT4ZNbTg0BsHeaE5Snjk3fLRwDFGxUMqSLhC4lvw07B58b35KFcE6CHaLBUTprOD8EOrgOWce_VV8mqQDi6IxPLrpA4Sd5qGe29o"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent flex flex-col justify-end p-8">
+<h4 class="font-display text-headline-md text-surface">Moti Bharat</h4>
+<p class="text-surface/90 font-body-md">The precision of bead-weaving passed down through five generations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto flex flex-wrap justify-center md:justify-between gap-8 opacity-70">
+<div class="flex flex-col items-center text-center gap-2 w-32">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+<span class="font-label-sm uppercase">100% Handmade</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 w-32">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+<span class="font-label-sm uppercase">Free Shipping</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 w-32">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<span class="font-label-sm uppercase">COD Available</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 w-32">
+<span class="material-symbols-outlined text-primary text-3xl">assignment_return</span>
+<span class="font-label-sm uppercase">Easy Returns</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 w-32">
+<span class="material-symbols-outlined text-primary text-3xl">volunteer_activism</span>
+<span class="font-label-sm uppercase">Support India</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant/30">
+<div class="space-y-stack-sm">
+<h2 class="font-display text-headline-md text-primary dark:text-primary-fixed-dim">KEVILAGU</h2>
+<p class="text-on-surface-variant font-body-md max-w-xs">A tribute to the maternal strength and vibrant artistry of India's artisan communities.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-lg text-on-surface mb-2">Our Values</h3>
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">100% Handmade</span>
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Free Shipping</span>
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">COD Available</span>
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Easy Returns</span>
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Handmade in India</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-lg text-on-surface mb-2">Connect</h3>
+<p class="text-on-surface-variant font-body-md">Join our artisanal journey for exclusive previews and stories from our workshop.</p>
+<div class="flex gap-4 pt-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">camera_alt</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">mail</span>
+</div>
+<p class="pt-8 text-on-surface-variant font-label-sm">© 2024 KEVILAGU. Made in India with heart.</p>
+</div>
+</footer>
+
+<!-- Mobile Drawer -->
+<div class="hidden" id="mobileDrawer">
+  <div class="fixed inset-0 bg-black/40 z-40" id="drawerOverlay" onclick="toggleDrawer()"></div>
+  <div class="fixed left-0 top-0 h-full w-72 bg-surface z-50 shadow-2xl flex flex-col p-6 gap-2">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="font-display text-headline-md text-primary font-bold">KEVILAGU</h2>
+      <button onclick="toggleDrawer()" class="material-symbols-outlined text-on-surface-variant">close</button>
+    </div>
+    <a href="home.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">home</span>Home</a>
+    <a href="shop_designs.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">grid_view</span>Shop</a>
+    <a href="faq.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">help_outline</span>FAQs</a>
+    <a href="about_us.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">info</span>About Us</a>
+  </div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface/95 backdrop-blur-md border-t border-outline-variant/20 shadow-lg">
+  <button onclick="toggleDrawer()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all">
+    <span class="material-symbols-outlined">menu</span>
+    <span class="font-label-lg text-[10px]">Menu</span>
+  </button>
+  <a href="shop_designs.html" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">grid_view</span><span class="font-label-lg text-[10px]">Shop</span></a>
+  <a href="#" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">search</span><span class="font-label-lg text-[10px]">Search</span></a>
+  <a href="cart.html" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">shopping_basket</span><span class="font-label-lg text-[10px]">Cart</span></a>
+</nav>
+<script>
+function toggleDrawer() {
+  document.getElementById('mobileDrawer').classList.toggle('hidden');
+}
+</script>
+</body></html>

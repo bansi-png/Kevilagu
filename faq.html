@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQs &amp; Contact | KEVILAGU</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f7efea",
+                    "surface-container-low": "#faf2ed",
+                    "on-tertiary-fixed": "#330f1f",
+                    "primary-fixed": "#ffd9df",
+                    "on-background": "#1e1b18",
+                    "tertiary-fixed-dim": "#f2b6cb",
+                    "on-primary-fixed-variant": "#8f003f",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#3f001b",
+                    "on-secondary-container": "#6e0034",
+                    "surface-tint": "#b90c55",
+                    "on-tertiary-fixed-variant": "#65394b",
+                    "on-surface": "#1e1b18",
+                    "surface": "#fff8f4",
+                    "outline": "#8d6f75",
+                    "on-primary-fixed": "#3f0018",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#e0d9d4",
+                    "secondary-container": "#fd6c9c",
+                    "tertiary": "#6c3f50",
+                    "surface-bright": "#fff8f4",
+                    "surface-variant": "#e9e1dc",
+                    "primary": "#9b0044",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#594045",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#ab2c5d",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#8b0e45",
+                    "outline-variant": "#e1bec4",
+                    "surface-container": "#f4ece7",
+                    "tertiary-container": "#875668",
+                    "background": "#fff8f4",
+                    "surface-container-highest": "#e9e1dc",
+                    "surface-container-high": "#eee7e2",
+                    "secondary-fixed": "#ffd9e1",
+                    "primary-container": "#c2185b",
+                    "on-tertiary-container": "#ffd8e4",
+                    "primary-fixed-dim": "#ffb1c2",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb1c2",
+                    "inverse-surface": "#33302d",
+                    "secondary-fixed-dim": "#ffb1c2",
+                    "on-primary-container": "#ffd9df",
+                    "tertiary-fixed": "#ffd9e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "unit": "8px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "display": ["Playfair Display"],
+                    "body-md": ["Atkinson Hyperlegible Next"],
+                    "label-sm": ["Atkinson Hyperlegible Next"],
+                    "label-lg": ["Atkinson Hyperlegible Next"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Atkinson Hyperlegible Next"]
+            },
+            "fontSize": {
+                    "display": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mirror-accent {
+            background: linear-gradient(135deg, #ffffff 0%, #e1bec4 100%);
+            box-shadow: inset -2px -2px 5px rgba(255,255,255,0.8), inset 2px 2px 5px rgba(122,59,90,0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface dark:bg-surface-container-low shadow-sm shadow-tertiary/10">
+<div class="flex items-center gap-4">
+<button class="md:hidden material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform" onclick="toggleDrawer()">menu</button>
+<h1 class="font-display text-headline-lg font-bold text-primary dark:text-primary-fixed tracking-tight">KEVILAGU</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center"><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="home.html">Home</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="shop_designs.html">Shop</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="about_us.html">About Us</a><a class="font-label-lg text-primary font-bold border-b-2 border-primary" href="faq.html">FAQs</a></nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">search</span></button>
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">shopping_cart</span></button>
+</div>
+</header>
+<main class="pt-[100px] pb-stack-lg">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-stack-lg">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-display text-display text-primary mb-stack-sm">Help &amp; Support</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">We value your time and the heritage behind every stitch. How can we assist you today?</p>
+</div>
+</section>
+<!-- Search Bar Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="max-w-3xl mx-auto relative">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full h-16 pl-14 pr-6 rounded-xl border-none bg-surface-container-high focus:ring-2 focus:ring-primary text-body-lg font-body-md transition-all shadow-sm" placeholder="Search for questions (e.g. shipping time)" type="text"/>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- FAQs Accordion (Lg: 7/12) -->
+<section class="lg:col-span-7 space-y-stack-md">
+<h3 class="font-display text-headline-lg text-primary mb-stack-md flex items-center gap-3">
+<span class="w-4 h-4 mirror-accent rounded-full inline-block"></span>
+                    Frequently Asked Questions
+                </h3>
+<!-- Accordion Item: Shipping -->
+<div class="bg-surface p-6 rounded-xl shadow-xl shadow-tertiary/5 border border-outline-variant/20 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-md text-on-surface">Shipping Information</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant font-body-md leading-relaxed border-t border-outline-variant/20 pt-4">
+                        We offer free shipping across India on all orders. Each KEVILAGU piece is handmade to order, ensuring the highest quality. Please allow 7-10 business days for artisanal crafting and delivery.
+                    </div>
+</div>
+<!-- Accordion Item: Returns -->
+<div class="bg-surface p-6 rounded-xl shadow-xl shadow-tertiary/5 border border-outline-variant/20 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-md text-on-surface">Returns &amp; Exchanges</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 hidden text-on-surface-variant font-body-md leading-relaxed border-t border-outline-variant/20 pt-4">
+                        Due to the artisanal nature of our products, we offer returns only for damaged items within 48 hours of delivery. Please provide a clear unboxing video for a smooth exchange process.
+                    </div>
+</div>
+<!-- Accordion Item: COD -->
+<div class="bg-surface p-6 rounded-xl shadow-xl shadow-tertiary/5 border border-outline-variant/20 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-md text-on-surface">COD &amp; Payments</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 hidden text-on-surface-variant font-body-md leading-relaxed border-t border-outline-variant/20 pt-4">
+                        We offer Cash on Delivery (COD) for most pin codes across India. You can also pay securely using UPI, Credit Cards, or Net Banking for a faster checkout experience.
+                    </div>
+</div>
+<!-- Accordion Item: Sizing -->
+<div class="bg-surface p-6 rounded-xl shadow-xl shadow-tertiary/5 border border-outline-variant/20 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-md text-on-surface">Sizing Guide</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 hidden text-on-surface-variant font-body-md leading-relaxed border-t border-outline-variant/20 pt-4">
+                        Our pieces follow a relaxed, contemporary fit. Please refer to our detailed sizing chart on the product page. For custom tailoring, please contact our support team.
+                    </div>
+</div>
+</section>
+<!-- Contact Section (Lg: 5/12) -->
+<aside class="lg:col-span-5">
+<div class="bg-primary-container/10 rounded-xl p-stack-md sticky top-[120px] border border-primary/10">
+<h3 class="font-display text-headline-lg text-primary mb-stack-sm">We're here to help</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Our support team is available Monday to Saturday, 10 AM to 6 PM IST. We speak English, Hindi, and Gujarati.</p>
+<div class="space-y-4">
+<!-- WhatsApp Button -->
+<a class="flex items-center justify-center gap-3 w-full bg-primary text-on-primary h-16 rounded-xl font-label-lg hover:bg-secondary active:scale-95 transition-all shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined" data-weight="fill">chat</span>
+                            Message on WhatsApp
+                        </a>
+<!-- Email Support -->
+<div class="bg-surface p-4 rounded-xl flex items-center gap-4 border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">mail</span>
+</div>
+<div>
+<p class="text-label-sm text-outline uppercase tracking-wider">Email Us</p>
+<p class="font-body-md text-on-surface font-semibold">care@kevilagu.com</p>
+</div>
+</div>
+<!-- Address -->
+<div class="bg-surface p-4 rounded-xl flex items-center gap-4 border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">location_on</span>
+</div>
+<div>
+<p class="text-label-sm text-outline uppercase tracking-wider">Our Studio</p>
+<p class="font-body-md text-on-surface font-semibold">Kutch, Gujarat - Handmade in India</p>
+</div>
+</div>
+</div>
+<div class="mt-stack-md pt-stack-md border-t border-outline-variant/30 text-center">
+<img alt="Artisanal Heritage" class="w-full h-40 object-cover rounded-lg mb-4" data-alt="A beautiful close-up of traditional Gujarati embroidery with vibrant threads in deep pink, gold, and turquoise. The fabric shows high-quality craftsmanship with small mirrors reflecting soft, warm lighting. The aesthetic is luxurious and maternal, celebrating Indian heritage in a clean, minimalist setting that emphasizes the tactile texture of the hand-stitched patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3ZCjc5kBsNmIpc_kSGFGLlvdiWprXUo5fPtd83uJ-sfK3Km7HGEcklqQvAZ9kzVxHb0kqHOgMQ7awAfpoTEaT9Gf7nqDA6fe8CpjCrWBT2Dyztmg3I_2-EWyuFCipUQQ09bW-h5VT3UwcxCoj7Nf6irI2rhBcQj_aHznCrZN1o4LfyJDdgU7K2PX3imjQ28K92kQt3ZZYPT06dsw6hCKhyy_eTj9Vrpb9XzSkDEyPbHz2o9KOyHCGBQ61xnecRTI5QeBGplEA7lw"/>
+<p class="font-body-md italic text-primary">Every stitch tells a story of a thousand hands.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-highest dark:bg-inverse-surface grid grid-cols-1 md:grid-cols-3 gap-gutter border-t border-outline-variant/30">
+<div class="flex flex-col gap-4">
+<h2 class="font-display text-headline-md text-primary dark:text-primary-fixed-dim font-bold">KEVILAGU</h2>
+<p class="font-body-md text-on-surface-variant">Elevating traditional Indian craftsmanship for the modern world.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-lg text-on-surface font-bold mb-2">Heritage Highlights</h4>
+<ul class="space-y-2">
+<li class="font-body-md text-on-surface-variant">100% Handmade</li>
+<li class="font-body-md text-on-surface-variant">Free Shipping</li>
+<li class="font-body-md text-on-surface-variant">COD Available</li>
+<li class="font-body-md text-on-surface-variant">Easy Returns</li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg text-on-surface font-bold">Stay Connected</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">share_reviews</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors">camera_alt</span>
+</div>
+<p class="font-body-md text-on-surface-variant">© 2024 KEVILAGU. Made in India with heart.</p>
+</div>
+</footer>
+
+<!-- Mobile Drawer -->
+<div class="hidden" id="mobileDrawer">
+  <div class="fixed inset-0 bg-black/40 z-40" id="drawerOverlay" onclick="toggleDrawer()"></div>
+  <div class="fixed left-0 top-0 h-full w-72 bg-surface z-50 shadow-2xl flex flex-col p-6 gap-2">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="font-display text-headline-md text-primary font-bold">KEVILAGU</h2>
+      <button onclick="toggleDrawer()" class="material-symbols-outlined text-on-surface-variant">close</button>
+    </div>
+    <a href="home.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">home</span>Home</a>
+    <a href="shop_designs.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">grid_view</span>Shop</a>
+    <a href="faq.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">help_outline</span>FAQs</a>
+    <a href="about_us.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">info</span>About Us</a>
+  </div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface/95 backdrop-blur-md border-t border-outline-variant/20 shadow-lg">
+  <button onclick="toggleDrawer()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all">
+    <span class="material-symbols-outlined">menu</span>
+    <span class="font-label-lg text-[10px]">Menu</span>
+  </button>
+  <a href="shop_designs.html" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">grid_view</span><span class="font-label-lg text-[10px]">Shop</span></a>
+  <a href="#" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">search</span><span class="font-label-lg text-[10px]">Search</span></a>
+  <a href="cart.html" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">shopping_basket</span><span class="font-label-lg text-[10px]">Cart</span></a>
+</nav>
+<script>
+function toggleDrawer() {
+  document.getElementById('mobileDrawer').classList.toggle('hidden');
+}
+</script>
+</body></html>

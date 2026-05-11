@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Confirmation | KEVILAGU</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mirror-glow {
+            background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f1f1f1 50%, #d1d1d1 100%);
+            box-shadow: 0 0 15px rgba(255,255,255,0.8);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f7efea",
+                      "surface-container-low": "#faf2ed",
+                      "on-tertiary-fixed": "#330f1f",
+                      "primary-fixed": "#ffd9df",
+                      "on-background": "#1e1b18",
+                      "tertiary-fixed-dim": "#f2b6cb",
+                      "on-primary-fixed-variant": "#8f003f",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#3f001b",
+                      "on-secondary-container": "#6e0034",
+                      "surface-tint": "#b90c55",
+                      "on-tertiary-fixed-variant": "#65394b",
+                      "on-surface": "#1e1b18",
+                      "surface": "#fff8f4",
+                      "outline": "#8d6f75",
+                      "on-primary-fixed": "#3f0018",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#e0d9d4",
+                      "secondary-container": "#fd6c9c",
+                      "tertiary": "#6c3f50",
+                      "surface-bright": "#fff8f4",
+                      "surface-variant": "#e9e1dc",
+                      "primary": "#9b0044",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#594045",
+                      "on-secondary": "#ffffff",
+                      "secondary": "#ab2c5d",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#8b0e45",
+                      "outline-variant": "#e1bec4",
+                      "surface-container": "#f4ece7",
+                      "tertiary-container": "#875668",
+                      "background": "#fff8f4",
+                      "surface-container-highest": "#e9e1dc",
+                      "surface-container-high": "#eee7e2",
+                      "secondary-fixed": "#ffd9e1",
+                      "primary-container": "#c2185b",
+                      "on-tertiary-container": "#ffd8e4",
+                      "primary-fixed-dim": "#ffb1c2",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "inverse-primary": "#ffb1c2",
+                      "inverse-surface": "#33302d",
+                      "secondary-fixed-dim": "#ffb1c5",
+                      "on-primary-container": "#ffd9df",
+                      "tertiary-fixed": "#ffd9e4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "stack-sm": "12px",
+                      "stack-lg": "48px",
+                      "container-max": "1280px",
+                      "stack-md": "24px",
+                      "unit": "8px",
+                      "section-gap": "80px"
+              },
+              "fontFamily": {
+                      "display": ["Playfair Display"],
+                      "body-md": ["Atkinson Hyperlegible Next"],
+                      "label-sm": ["Atkinson Hyperlegible Next"],
+                      "label-lg": ["Atkinson Hyperlegible Next"],
+                      "headline-md": ["Playfair Display"],
+                      "headline-lg": ["Playfair Display"],
+                      "body-lg": ["Atkinson Hyperlegible Next"]
+              },
+              "fontSize": {
+                      "display": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface dark:bg-surface-container-low shadow-sm shadow-tertiary/10">
+<div class="flex items-center gap-4">
+<button class="md:hidden material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform" onclick="toggleDrawer()">menu</button>
+<h1 class="font-display text-headline-lg font-bold text-primary dark:text-primary-fixed tracking-tight">KEVILAGU</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center"><a class="font-label-lg text-primary font-bold border-b-2 border-primary" href="home.html">Home</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="shop_designs.html">Shop</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="about_us.html">About Us</a><a class="font-label-lg text-on-surface-variant hover:text-secondary transition-colors" href="faq.html">FAQs</a></nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">search</span></button>
+<button class="material-symbols-outlined text-primary scale-95 active:scale-100 transition-transform"><span class="material-symbols-outlined">shopping_cart</span></button>
+</div>
+</header>
+<main class="flex-grow pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Side: Celebratory Graphic & Message -->
+<div class="lg:col-span-7 flex flex-col gap-stack-md">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl shadow-tertiary/10 mb-stack-md">
+<img alt="Artisanal Embroidery" class="w-full h-full object-cover" data-alt="A close-up shot of vibrant, intricate Gujarati hand embroidery on deep raspberry fabric, featuring mirrors and colorful threads in pinks, oranges, and plums. The lighting is soft and golden, emphasizing the tactile textures and artisanal craftsmanship. The overall aesthetic is luxurious, warm, and maternal, reflecting a premium heritage brand dedicated to empowering women artisans. Soft bokeh background keeps focus on the stitches." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkXxaVgqQ87DEWV9o1_SOEiLjKG0Aa0AUgbfCIcGlO6O8cKbzSK7qbVULRMfjXBWprAXPKFBSTjyALbIhjBOVQ41PAAEoS28tGqfVMxROaIPWkql3DnQHL4QJn5wultvMdyGJl7Ns8hO963_Od_6p1jHo6WZg6PLDos8Ui62hf1uE92_2HMw8s9BaF2bz-C4UF2Yr9bgqIZMy_IlcGvqj2wygKd7yPtN4kUGKcMR9Gh-2V5c5jUwFkSpNQYeRLxF3BAOWms4BKGtM"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] flex items-center justify-center">
+<div class="w-24 h-24 rounded-full mirror-glow flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<div class="space-y-stack-sm">
+<h2 class="font-display text-display text-primary leading-tight">Thank You for Empowering Our Artisans!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Your order for handmade treasures has been placed successfully. We are preparing your pieces with love and care.</p>
+</div>
+<div class="mt-stack-md p-stack-md bg-secondary-fixed/30 rounded-xl border border-outline-variant/30 relative overflow-hidden">
+<!-- Mirror Accent Decor -->
+<div class="absolute top-2 right-2 w-4 h-4 rounded-full mirror-glow opacity-60"></div>
+<div class="flex gap-4 items-start relative z-10">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div class="space-y-2">
+<h3 class="font-label-lg text-label-lg text-on-secondary-fixed uppercase tracking-wider">Impact Message</h3>
+<p class="font-body-md text-on-surface italic">"Every stitch you wear helps an artisan in Gujarat build a better future for her family."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Order Summary Bento Box -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<div class="bg-surface-container-low p-stack-md rounded-xl shadow-sm border border-outline-variant/20 flex flex-col gap-6">
+<div class="flex justify-between items-center border-b border-outline-variant/30 pb-4">
+<span class="font-label-lg text-on-surface-variant">Order Confirmation</span>
+<span class="font-label-lg text-primary font-bold">#KV-82931-24</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white rounded-lg border border-outline-variant/10 shadow-sm">
+<p class="text-label-sm text-on-surface-variant uppercase mb-1">Total Amount</p>
+<p class="text-headline-md font-display text-primary">₹899</p>
+</div>
+<div class="p-4 bg-white rounded-lg border border-outline-variant/10 shadow-sm">
+<p class="text-label-sm text-on-surface-variant uppercase mb-1">Est. Delivery</p>
+<p class="text-headline-md font-display text-tertiary">7-10 Days</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+<div>
+<p class="text-label-lg text-on-surface font-semibold">Standard Shipping</p>
+<p class="text-label-sm text-on-surface-variant">Hand-packed from our Kutch workshop</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<p class="text-label-lg text-on-surface font-semibold">Quality Guaranteed</p>
+<p class="text-label-sm text-on-surface-variant">Each piece inspected by senior master artisans</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 mt-4">
+<button class="w-full py-4 bg-primary text-on-primary rounded-lg font-label-lg hover:bg-secondary transition-all shadow-md active:scale-95">
+                            Continue Shopping
+                        </button>
+<a class="w-full py-3 flex items-center justify-center gap-2 text-primary font-label-lg hover:underline transition-all" href="#">
+<span class="material-symbols-outlined text-lg">camera_alt</span>
+                            Follow our Journey on Instagram
+                        </a>
+</div>
+</div>
+<!-- Small Community Card -->
+<div class="bg-tertiary text-on-tertiary p-stack-md rounded-xl shadow-lg relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-2">
+<p class="text-label-sm uppercase tracking-widest opacity-80">Community Circle</p>
+<p class="text-body-md font-medium">Join 5,000+ others celebrating heritage craftsmanship every day.</p>
+</div>
+<!-- Background Pattern Hint -->
+<div class="absolute -bottom-4 -right-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">width_wide</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant/30">
+<div class="flex flex-col gap-4">
+<h2 class="font-display text-headline-md text-primary dark:text-primary-fixed-dim">KEVILAGU</h2>
+<p class="font-body-md text-on-surface-variant">Honoring the ancient embroidery traditions of Gujarat through modern artisanal luxury.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-label-lg text-on-surface uppercase tracking-widest">Our Promise</h3>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="w-2 h-2 rounded-full mirror-glow"></span> 100% Handmade</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="w-2 h-2 rounded-full mirror-glow"></span> Free Shipping</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="w-2 h-2 rounded-full mirror-glow"></span> Easy Returns</li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-label-lg text-on-surface uppercase tracking-widest">Stay Connected</h3>
+<p class="font-body-md text-on-surface-variant">© 2024 KEVILAGU. Made in India with heart.</p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+</div>
+</footer>
+
+<!-- Mobile Drawer -->
+<div class="hidden" id="mobileDrawer">
+  <div class="fixed inset-0 bg-black/40 z-40" id="drawerOverlay" onclick="toggleDrawer()"></div>
+  <div class="fixed left-0 top-0 h-full w-72 bg-surface z-50 shadow-2xl flex flex-col p-6 gap-2">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="font-display text-headline-md text-primary font-bold">KEVILAGU</h2>
+      <button onclick="toggleDrawer()" class="material-symbols-outlined text-on-surface-variant">close</button>
+    </div>
+    <a href="home.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">home</span>Home</a>
+    <a href="shop_designs.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">grid_view</span>Shop</a>
+    <a href="faq.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">help_outline</span>FAQs</a>
+    <a href="about_us.html" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 font-label-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-primary">info</span>About Us</a>
+  </div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface/95 backdrop-blur-md border-t border-outline-variant/20 shadow-lg">
+  <button onclick="toggleDrawer()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all">
+    <span class="material-symbols-outlined">menu</span>
+    <span class="font-label-lg text-[10px]">Menu</span>
+  </button>
+  <a href="shop_designs.html" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">grid_view</span><span class="font-label-lg text-[10px]">Shop</span></a>
+  <a href="#" class="flex flex-col items-center justify-center text-on-surface-variant p-2 active:scale-90 transition-all"><span class="material-symbols-outlined">search</span><span class="font-label-lg text-[10px]">Search</span></a>
+  <a href="cart.html" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 min-w-[64px] active:scale-90 transition-all"><span class="material-symbols-outlined">shopping_basket</span><span class="font-label-lg text-[10px]">Cart</span></a>
+</nav>
+<script>
+function toggleDrawer() {
+  document.getElementById('mobileDrawer').classList.toggle('hidden');
+}
+</script>
+</body></html>
